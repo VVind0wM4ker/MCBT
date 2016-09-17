@@ -9,10 +9,10 @@ const std::regex BTFile::re_basic_structure("^(\\s*(([\\t\\ ]*\\[[\\t\\ ]*#[0-9]
 const std::regex BTFile::re_structure_fragment("\\n*([\\t\\n\\r\\s]*((\\[#[0-9]+\\s[A-Za-z-_]*\\]){1}([^\\[-\\]])*(\\[-\\]){1})+)*"); //fragment of valid string in content
 //---
 
-//standardise()																					//format itemheader
+//standardise()											//format itemheader
 const std::regex BTFile::re_standardise1("\\s*\\[[\\t\\ ]*#([0-9]+)([\\t\\ ]+([A-Za-z-_]+))?[\\t\\ ]*\\]\\s*\\n(([\\t\\ ]*[A-Z-a-z0-9#_-]*?[\\t\\ ]*\\n)+?)[\\s]*([\\t\\ ]*\\[[\\t\\ ]*-[\\t\\ ]*\\][\\t\\ ]*(\\n|$))");
-const std::regex BTFile::re_standardise2("^[\\t\\ ]*\\n");										//remove empty lines
-const std::regex BTFile::re_standardise3("^([\\ \\s]+)");										//indent itemid/aliases
+const std::regex BTFile::re_standardise2("^[\\t\\ ]*\\n");					//remove empty lines
+const std::regex BTFile::re_standardise3("^([\\ \\s]+)");					//indent itemid/aliases
 const std::regex BTFile::re_standardise4("^\\s*(\\[.*)\\n([\\t\\ ]*[A-Za-z-_]*)([^\\]]*\\])");	//add empty line after itemid
 //---
 
